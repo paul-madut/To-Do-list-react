@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+  @apply bg-[#003049] 
+}
+
+.title{
+  @apply text-6xl text-center text-[#FCBF49]
+}
+
+button{
+  @apply border-2 border-[#F77F00] text-[#EAE2B7] p-2 rounded-full m-6
+}
+
+button:hover{
+  @apply bg-[#D62828] scale-110 transition ease-in-out delay-150
+}
