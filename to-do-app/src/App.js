@@ -31,6 +31,18 @@ function App() {
     <MyButton onClick={()=>addItem(item)}>Add Todo</MyButton>
     <InputField onChange = {(e)=> setItem(e.target.value)} value = {item} type="text" placeholder='What needs to get done?'></InputField>
     <MyButton>Clear</MyButton>
+    <ul>
+      {
+        list.map(item => {
+
+  
+          return(
+              <li key={item.id}>{item.value}</li>
+
+          )
+        })
+      }
+    </ul>
     
     </>
   );
@@ -52,6 +64,7 @@ function MyButton(props){
     </>
   )
 }
+
 
 
 
