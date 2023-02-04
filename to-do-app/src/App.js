@@ -27,22 +27,35 @@ function App() {
 
   return (
     <>
-    <h1 className='title'>Paul's One Thing</h1>
+    <div className='nav'>
+      <h1 className='title'>Paul's One Thing</h1>
+    </div>
+
+    <div className='page1-container'>
+       
+    <div className="input-field text-center align-middle justify-center">
     <MyButton onClick={()=>addItem(item)}>Add Todo</MyButton>
     <InputField onChange = {(e)=> setItem(e.target.value)} value = {item} type="text" placeholder='What needs to get done?'></InputField>
     <MyButton>Clear</MyButton>
-    <ul>
+
+    
       {
         list.map(item => {
-
-  
           return(
-              <li key={item.id}>{item.value}</li>
-
+              <div key={item.id}>
+                <div className='item-div'>
+                <p className='item-text'>{item.value}</p>
+                </div>
+              </div>
           )
         })
       }
-    </ul>
+    
+    </div>
+
+    </div>
+    
+    
     
     </>
   );

@@ -2,18 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
-  @apply bg-[#003049] 
+.nav{
+  @apply bg-navy1 h-20
 }
-
 .title{
-  @apply text-6xl text-center text-[#FCBF49]
+  @apply text-6xl text-center text-beige1
 }
 
 button{
-  @apply border-2 border-[#F77F00] text-[#EAE2B7] p-2 rounded-full m-6
+  @apply border-2 border-orange1 text-red1 p-2 rounded-full m-6
 }
 
 button:hover{
-  @apply bg-[#D62828] scale-110 transition ease-in-out delay-150
+  @apply bg-red1 scale-110 transition ease-in-out delay-150 text-beige1
+}
+
+.page1-container{
+  @apply bg-beige1 min-h-screen w-full justify-center align-middle flex
+}
+
+.item-div{
+  @apply p-8 m-4 w-[400px] h-[128px] flex bg-yellow1 border-4 border-navy1 rounded-xl shadow-xl 
+}
+
+.item-text{
+  @apply text-navy1 text-xl 
 }
