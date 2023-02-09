@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .nav{
-  @apply bg-navy1 h-20
+  @apply bg-navy1 h-20 border-b-4 border-b-red1
 }
 .title{
   @apply text-6xl text-center text-beige1
@@ -18,13 +18,17 @@ button:hover{
 }
 
 .page1-container{
-  @apply bg-beige1 min-h-screen w-full justify-center align-middle flex
+  @apply bg-beige1 min-h-screen  w-full justify-center align-middle flex 
 }
 
+.list-container{
+  @apply w-full grid grid-cols-3 gap-4 p-6 justify-center
+}
 .item-div{
-  @apply p-8 m-4 w-[400px] h-[128px] flex bg-yellow1 border-4 border-navy1 rounded-xl shadow-xl 
+  @apply p-8 m-4 w-[400px] h-full flex flex-col bg-yellow1 border-4 border-navy1 rounded-xl shadow-xl relative
 }
 
 .item-text{
-  @apply text-navy1 text-xl 
+  @apply text-navy1 text-xl absolute
 }
+

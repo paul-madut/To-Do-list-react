@@ -11,6 +11,10 @@ function App() {
       randomId = Math.floor(Math.random()*1000);
     }
 
+    function removeItem(id){
+      return
+    }
+
     const listItem = {
       id: randomId,
       value: item
@@ -36,20 +40,23 @@ function App() {
     <div className="input-field text-center align-middle justify-center">
     <MyButton onClick={()=>addItem(item)}>Add Todo</MyButton>
     <InputField onChange = {(e)=> setItem(e.target.value)} value = {item} type="text" placeholder='What needs to get done?'></InputField>
-    <MyButton>Clear</MyButton>
+    <MyButton onClick={()=>setList([])}>Clear</MyButton>
 
-    
+    <div className="list-container">
       {
         list.map(item => {
           return(
               <div key={item.id}>
-                <div className='item-div'>
+                <div className='item-div relative'>
                 <p className='item-text'>{item.value}</p>
+                <span className='static space-x-12 p-6'> <button>❌</button> <button>✔️</button> </span>
                 </div>
               </div>
           )
         })
       }
+
+    </div>
     
     </div>
 
